@@ -71,7 +71,7 @@ export function SubjectForm({ initialData, onSave }: SubjectFormProps) {
         throw new Error(errorData.message || `Failed to save subject: ${response.statusText}`);
       }
 
-      const result = await response.json();
+      await response.json(); // Consume the response body
       toast.success(initialData?.id ? 'Subject updated successfully!' : 'Subject created successfully!');
 
       if (onSave) {
