@@ -26,9 +26,9 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
-  DialogFooter, // Added DialogFooter
-  DialogClose // Added DialogClose
+  // DialogTrigger, // Not used as dialog is controlled
+  // DialogFooter, // Not used as form has its own save/cancel
+  // DialogClose // Not used
 } from '@/components/ui/dialog';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
@@ -154,7 +154,7 @@ export function SubjectTable({ subjects }: SubjectTableProps) {
             <DialogHeader>
               <DialogTitle>Edit Subject</DialogTitle>
               <DialogDescription>
-                Make changes to the subject details here. Click save when you're done.
+                Make changes to the subject details here. Click save when you&apos;re done.
               </DialogDescription>
             </DialogHeader>
             <SubjectForm

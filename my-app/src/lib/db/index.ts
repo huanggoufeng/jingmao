@@ -15,7 +15,6 @@ if (process.env.DATABASE_URL) {
   // This will likely fail at runtime if no valid connection string is provided.
   // Consider throwing an error here or using a mock/local DB for development.
   console.warn("DATABASE_URL is not set. Database operations will likely fail.");
-  // @ts-ignore
   pool = new Pool({}); // This will use default PG environment variables if available
 }
 

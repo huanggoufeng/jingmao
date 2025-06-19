@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { subjects } from '@/lib/db/schema';
-import { eq, asc, desc, ilike } from 'drizzle-orm'; // Import operators
+import { asc } from 'drizzle-orm'; // Import operators
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     // Placeholder: Replace with actual database query
     const allSubjects = await db.select().from(subjects).orderBy(asc(subjects.id));
